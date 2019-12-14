@@ -15,7 +15,8 @@ func SetupRouter() *gin.Engine {
 
 	user := router.Group("/user/")
 	{
-		user.GET("/user/:name", handlers.GetUser)
+		user.GET("/:name", handlers.GetUser)
+		user.POST("/register", handlers.RegisterUser)
 	}
 	return router
 }

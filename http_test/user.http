@@ -1,0 +1,16 @@
+GET http://localhost:8080/user/chenjiahua.chen
+Content-Type: application/x-www-form-urlencoded
+
+###
+POST http://localhost:8080/user/register
+Content-Type: application/x-www-form-urlencoded
+
+email=rchenhyy@outlook.com&password=test007&password-again=test007
+
+###
+POST http://localhost:8080/user/login
+Content-Type: application/x-www-form-urlencoded
+
+email=rchenhyy@outlook.com&password=test007
+
+###

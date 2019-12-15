@@ -47,6 +47,8 @@ func UserLogin(c *gin.Context) {
 	u := user.QueryOne()
 	if u.Password == user.Password {
 		log.Println("login success")
+		// set cookie
+		c.SetCookie("username", user.Email, 0, "path", c.Request.Host, false, true)
 		c.String(http.StatusOK, "user: email=%v", user.Email)
 		return
 	}
